@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#0066FF',
+                        'brand-dark': '#1a1a2e',
+                        'brand-light': '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+</head>
+<body class="font-sans bg-white">
+
+<header id="header" class="bg-gradient-to-r from-brand-dark via-gray-900 to-brand-dark shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex items-center justify-between px-6 py-4">
+            <div class="flex items-center space-x-12">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-br from-brand-blue to-blue-600 p-2.5 rounded-lg">
+                        <i class="fa-solid fa-microchip text-white text-xl"></i>
+                    </div>
+                    <span class="text-white font-bold text-xl tracking-tight">ZPTech</span>
+                </div>
+                
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <div class="relative group">
+                        <button class="px-5 py-2.5 text-white hover:text-brand-blue transition-all duration-300 flex items-center space-x-2 font-medium">
+                            <span>Products</span>
+                            <i class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+                        <div id="products-mega" class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                            <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden" style="width: 1100px;">
+                                <div class="grid grid-cols-12 gap-0">
+                                    <div class="col-span-3 bg-gradient-to-br from-brand-blue to-blue-600 p-8">
+                                        <h3 class="text-white font-bold text-xl mb-4">Explore Products</h3>
+                                        <p class="text-blue-100 text-sm mb-6 leading-relaxed">Discover cutting-edge technology solutions designed for modern businesses</p>
+                                        <div class="space-y-3">
+                                            <a href="#" class="flex items-center space-x-3 text-white hover:text-blue-100 transition-colors group/link">
+                                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover/link:bg-white/20 transition-colors">
+                                                    <i class="fa-solid fa-star text-yellow-300"></i>
+                                                </div>
+                                                <span class="text-sm font-medium">Featured Products</span>
+                                            </a>
+                                            <a href="#" class="flex items-center space-x-3 text-white hover:text-blue-100 transition-colors group/link">
+                                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover/link:bg-white/20 transition-colors">
+                                                    <i class="fa-solid fa-fire text-orange-300"></i>
+                                                </div>
+                                                <span class="text-sm font-medium">New Arrivals</span>
+                                            </a>
+                                            <a href="#" class="flex items-center space-x-3 text-white hover:text-blue-100 transition-colors group/link">
+                                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center group-hover/link:bg-white/20 transition-colors">
+                                                    <i class="fa-solid fa-tags text-green-300"></i>
+                                                </div>
+                                                <span class="text-sm font-medium">Special Offers</span>
+                                            </a>
+                                        </div>
+                                        <div class="mt-8 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                                            <p class="text-white text-xs font-semibold mb-1">Need Help?</p>
+                                            <p class="text-blue-100 text-xs">Contact our product specialists</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-span-9 p-8">
+                                        <div class="grid grid-cols-3 gap-6">
+                                            <div>
+                                                <h4 class="text-gray-900 font-bold text-sm mb-4 flex items-center">
+                                                    <div class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center mr-2">
+                                                        <i class="fa-solid fa-server text-brand-blue text-sm"></i>
+                                                    </div>
+                                                    Hardware Solutions
+                                                </h4>
+                                                <div class="space-y-3">
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-microchip text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Processors</p>
+                                                            <p class="text-gray-500 text-xs">High-performance CPUs</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-memory text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Memory & Storage</p>
+                                                            <p class="text-gray-500 text-xs">RAM, SSD, HDD solutions</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-network-wired text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Networking</p>
+                                                            <p class="text-gray-500 text-xs">Routers & switches</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div>
+                                                <h4 class="text-gray-900 font-bold text-sm mb-4 flex items-center">
+                                                    <div class="w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center mr-2">
+                                                        <i class="fa-solid fa-code text-purple-600 text-sm"></i>
+                                                    </div>
+                                                    Software & Licenses
+                                                </h4>
+                                                <div class="space-y-3">
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-brands fa-windows text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Operating Systems</p>
+                                                            <p class="text-gray-500 text-xs">Windows, Linux licenses</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-shield-halved text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Security Software</p>
+                                                            <p class="text-gray-500 text-xs">Antivirus & firewalls</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-briefcase text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Business Suite</p>
+                                                            <p class="text-gray-500 text-xs">Office & productivity</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div>
+                                                <h4 class="text-gray-900 font-bold text-sm mb-4 flex items-center">
+                                                    <div class="w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center mr-2">
+                                                        <i class="fa-solid fa-cloud text-green-600 text-sm"></i>
+                                                    </div>
+                                                    Cloud Services
+                                                </h4>
+                                                <div class="space-y-3">
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-database text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Cloud Storage</p>
+                                                            <p class="text-gray-500 text-xs">Scalable data solutions</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-rocket text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Hosting Services</p>
+                                                            <p class="text-gray-500 text-xs">VPS & dedicated servers</p>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="flex items-start space-x-3 group/item hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                                                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-chart-line text-white"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue transition-colors">Analytics Platform</p>
+                                                            <p class="text-gray-500 text-xs">Business intelligence</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-6 pt-6 border-t border-gray-200">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#" class="text-brand-blue font-semibold text-sm hover:text-blue-700 flex items-center">
+                                                    View All Products
+                                                    <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                                                </a>
+                                                <div class="flex items-center space-x-2 text-xs text-gray-500">
+                                                    <i class="fa-solid fa-phone"></i>
+                                                    <span>Need assistance? Call us: 1-800-ZPTECH</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <button class="px-5 py-2.5 text-white hover:text-brand-blue transition-all duration-300 flex items-center space-x-2 font-medium">
+                            <span>Solutions</span>
+                            <i class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+                        <div id="solutions-mega" class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                            <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden" style="width: 900px;">
+                                <div class="grid grid-cols-12 gap-0">
+                                    <div class="col-span-5 bg-gradient-to-br from-purple-600 to-indigo-600 p-8 relative overflow-hidden">
+                                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                                        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                                        <div class="relative z-10">
+                                            <h3 class="text-white font-bold text-2xl mb-3">Industry Solutions</h3>
+                                            <p class="text-purple-100 text-sm mb-6 leading-relaxed">Tailored technology solutions for your industry needs</p>
+                                            <div class="h-48 bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden mb-6">
+                                                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1b59eeca75-9dc1af7b54c22d585f8b.png" alt="modern tech workspace with multiple monitors displaying data analytics and cloud computing interfaces, professional office environment, blue and purple lighting" />
+                                            </div>
+                                            <a href="#" class="inline-flex items-center space-x-2 bg-white text-purple-600 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-purple-50 transition-colors">
+                                                <span>Explore All Solutions</span>
+                                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-span-7 p-8">
+                                        <div class="grid grid-cols-2 gap-6">
+                                            <div>
+                                                <h4 class="text-gray-900 font-bold text-sm mb-4">By Industry</h4>
+                                                <div class="space-y-2">
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-hospital text-red-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Healthcare</span>
+                                                    </a>
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-graduation-cap text-blue-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Education</span>
+                                                    </a>
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-building text-gray-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Enterprise</span>
+                                                    </a>
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-store text-green-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Retail</span>
+                                                    </a>
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-industry text-orange-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Manufacturing</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div>
+                                                <h4 class="text-gray-900 font-bold text-sm mb-4">By Need</h4>
+                                                <div class="space-y-2">
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-shield text-purple-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Security</span>
+                                                    </a>
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-arrows-spin text-cyan-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Automation</span>
+                                                    </a>
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-chart-pie text-pink-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Analytics</span>
+                                                    </a>
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-users text-teal-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Collaboration</span>
+                                                    </a>
+                                                    <a href="#" class="flex items-center space-x-3 text-gray-700 hover:text-brand-blue hover:bg-gray-50 p-2 rounded-lg transition-all group/link">
+                                                        <i class="fa-solid fa-mobile text-indigo-500 group-hover/link:scale-110 transition-transform"></i>
+                                                        <span class="text-sm font-medium">Mobility</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-6 pt-6 border-t border-gray-200">
+                                            <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-xl">
+                                                <div class="flex items-start space-x-3">
+                                                    <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <i class="fa-solid fa-lightbulb text-white"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="text-gray-900 font-semibold text-sm mb-1">Custom Solutions</h5>
+                                                        <p class="text-gray-600 text-xs">Need something specific? Let's build it together.</p>
+                                                        <a href="#" class="text-brand-blue text-xs font-semibold mt-2 inline-block hover:underline">Get Started →</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <button class="px-5 py-2.5 text-white hover:text-brand-blue transition-all duration-300 flex items-center space-x-2 font-medium">
+                            <span>Resources</span>
+                            <i class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </button>
+                        <div id="resources-mega" class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                            <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden" style="width: 700px;">
+                                <div class="p-8">
+                                    <div class="grid grid-cols-2 gap-8">
+                                        <div>
+                                            <h4 class="text-gray-900 font-bold text-sm mb-4 flex items-center">
+                                                <i class="fa-solid fa-book text-brand-blue mr-2"></i>
+                                                Learn
+                                            </h4>
+                                            <div class="space-y-3">
+                                                <a href="#" class="block p-3 hover:bg-gray-50 rounded-lg transition-colors group/item">
+                                                    <div class="flex items-start space-x-3">
+                                                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-graduation-cap text-brand-blue"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue">Documentation</p>
+                                                            <p class="text-gray-500 text-xs mt-0.5">Technical guides & APIs</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="block p-3 hover:bg-gray-50 rounded-lg transition-colors group/item">
+                                                    <div class="flex items-start space-x-3">
+                                                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-video text-purple-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue">Video Tutorials</p>
+                                                            <p class="text-gray-500 text-xs mt-0.5">Step-by-step guides</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="block p-3 hover:bg-gray-50 rounded-lg transition-colors group/item">
+                                                    <div class="flex items-start space-x-3">
+                                                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-newspaper text-green-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue">Blog</p>
+                                                            <p class="text-gray-500 text-xs mt-0.5">Latest news & insights</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <h4 class="text-gray-900 font-bold text-sm mb-4 flex items-center">
+                                                <i class="fa-solid fa-headset text-brand-blue mr-2"></i>
+                                                Support
+                                            </h4>
+                                            <div class="space-y-3">
+                                                <a href="#" class="block p-3 hover:bg-gray-50 rounded-lg transition-colors group/item">
+                                                    <div class="flex items-start space-x-3">
+                                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-life-ring text-orange-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue">Help Center</p>
+                                                            <p class="text-gray-500 text-xs mt-0.5">FAQs & troubleshooting</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="block p-3 hover:bg-gray-50 rounded-lg transition-colors group/item">
+                                                    <div class="flex items-start space-x-3">
+                                                        <div class="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-comments text-cyan-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue">Community Forum</p>
+                                                            <p class="text-gray-500 text-xs mt-0.5">Connect with users</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="block p-3 hover:bg-gray-50 rounded-lg transition-colors group/item">
+                                                    <div class="flex items-start space-x-3">
+                                                        <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <i class="fa-solid fa-envelope text-red-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-900 font-medium text-sm group-hover/item:text-brand-blue">Contact Support</p>
+                                                            <p class="text-gray-500 text-xs mt-0.5">24/7 assistance</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-6 pt-6 border-t border-gray-200">
+                                        <div class="bg-gradient-to-r from-brand-blue to-blue-600 p-5 rounded-xl text-white">
+                                            <div class="flex items-center justify-between">
+                                                <div>
+                                                    <h5 class="font-bold text-base mb-1">Download Resources</h5>
+                                                    <p class="text-blue-100 text-xs">Whitepapers, case studies & more</p>
+                                                </div>
+                                                <a href="#" class="bg-white text-brand-blue px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-50 transition-colors flex items-center space-x-2">
+                                                    <i class="fa-solid fa-download text-xs"></i>
+                                                    <span>Browse</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="px-5 py-2.5 text-white hover:text-brand-blue transition-all duration-300 font-medium">
+                        Pricing
+                    </a>
+                    
+                    <a href="#" class="px-5 py-2.5 text-white hover:text-brand-blue transition-all duration-300 font-medium">
+                        About
+                    </a>
+                </nav>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button class="text-white hover:text-brand-blue transition-colors hidden lg:block">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="text-white hover:text-brand-blue transition-colors hidden lg:block">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <a href="#" class="bg-brand-blue hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 hidden lg:block">
+                    Get Started
+                </a>
+                <button class="text-white lg:hidden">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main id="hero-section" class="bg-gradient-to-br from-gray-50 to-gray-100 h-[600px] flex items-center justify-center">
+    <div class="text-center px-6">
+        <div class="inline-block mb-6">
+            <div class="bg-gradient-to-r from-brand-blue to-blue-600 p-6 rounded-2xl">
+                <i class="fa-solid fa-wand-magic-sparkles text-white text-5xl"></i>
+            </div>
+        </div>
+        <h1 class="text-6xl font-bold text-gray-900 mb-4">
+            Stunning Mega Menu
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Experience the power of modern navigation with our custom-designed mega menu for ZPTech
+        </p>
+        <div class="flex items-center justify-center space-x-4">
+            <a href="#" class="bg-brand-blue hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center space-x-2">
+                <span>Explore Products</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#" class="bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border-2 border-gray-200">
+                View Demo
+            </a>
+        </div>
+    </div>
+</main>
+
+<section id="features-section" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Mega Menu Features</h2>
+            <p class="text-xl text-gray-600">Built with performance and user experience in mind</p>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-8">
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
+                <div class="w-16 h-16 bg-brand-blue rounded-xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-bolt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Lightning Fast</h3>
+                <p class="text-gray-600">Optimized for speed with minimal load time impact</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl">
+                <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-mobile-screen text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Fully Responsive</h3>
+                <p class="text-gray-600">Perfect experience across all devices and screen sizes</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl">
+                <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-palette text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Brand Aligned</h3>
+                <p class="text-gray-600">Seamlessly integrated with ZPTech's visual identity</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="bg-gradient-to-br from-brand-blue to-blue-600 p-2.5 rounded-lg">
+                        <i class="fa-solid fa-microchip text-white text-xl"></i>
+                    </div>
+                    <span class="text-white font-bold text-xl">ZPTech</span>
+                </div>
+                <p class="text-gray-400 text-sm">Leading technology solutions for modern businesses worldwide.</p>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Products</h4>
+                <div class="space-y-2 text-sm text-gray-400">
+                    <a href="#" class="block hover:text-white transition-colors">Hardware</a>
+                    <a href="#" class="block hover:text-white transition-colors">Software</a>
+                    <a href="#" class="block hover:text-white transition-colors">Cloud Services</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <div class="space-y-2 text-sm text-gray-400">
+                    <a href="#" class="block hover:text-white transition-colors">About Us</a>
+                    <a href="#" class="block hover:text-white transition-colors">Careers</a>
+                    <a href="#" class="block hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold mb-4">Connect</h4>
+                <div class="flex space-x-3">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-blue transition-colors">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-blue transition-colors">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-blue transition-colors">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+            <p>&copy; 2024 ZPTech. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
